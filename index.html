@@ -195,6 +195,75 @@
             display: flex;
             align-items: center;
         }
+        .spinner-gradient {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: conic-gradient(from 0deg, #adada8, #adadaa, #9e9e9b, #8c8c89, #7bb9e3, #7bb9e3, #74b6e3, #70b6e6, #64b0e3, #5dade2);
+            animation: spin 5s linear infinite;
+            margin: 0 auto 10px;
+            position: relative;
+        }
+
+        .spinner-gradient::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 150px;
+            height: 150px;
+            background: #D4E6F1;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+       	.gradient-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            min-width: 400px;
+        }
+        
+                .side-text {
+            color: grey;
+            font-size: 28px;
+            font-weight: bold;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            opacity: 0;
+            animation: fadeInSlide 1s ease-out 0.5s forwards;
+            white-space: nowrap;
+        }
+
+        .left-text {
+            animation: fadeInSlideLeft 1s ease-out 0.5s forwards;
+        }
+
+        .right-text {
+            animation: fadeInSlideRight 1s ease-out 0.5s forwards;
+        }
+        
+        @keyframes fadeInSlideLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInSlideRight {
+            0% {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
 
         .cta-button {
             display: inline-block;
@@ -549,10 +618,13 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
-            <!--  <h1 class="fade-in-up">Open Source Mastery</h1>-->
             
             <div class="hero-image fade-in-up">
-                <img src="Untitled2.png" height="300px">
+                <div class="gradient-container">
+                    <div class="side-text left-text">**No Vendor lock-in</div>
+                    <div class="spinner-gradient"></div>
+                    <div class="side-text right-text">**50%-70% Savings</div>
+                </div>
             </div>
             <div class="hero-button fade-in-up">
                 <a href="#contact" class="cta-button">Calculate Your Savings</a>
