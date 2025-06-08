@@ -217,6 +217,8 @@
             transform: translate(-50%, -50%);
         }
         
+  
+        
        	.gradient-container {
             display: flex;
             align-items: center;
@@ -264,6 +266,33 @@
                 transform: translateX(0);
             }
         }
+        
+        @media (max-width: 768px) {
+    /* Add these rules to your existing mobile media query */
+    
+    .gradient-container {
+        min-width: auto;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .side-text {
+        font-size: 18px;
+        white-space: normal;
+        text-align: center;
+        max-width: 90%;
+    }
+    
+    .spinner-gradient {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .spinner-gradient::before {
+        width: 90px;
+        height: 90px;
+    }
+}
 
         .cta-button {
             display: inline-block;
@@ -621,7 +650,7 @@
             
             <div class="hero-image fade-in-up">
                 <div class="gradient-container">
-                    <div class="side-text left-text">**No Vendor lock-in</div>
+                    <div class="side-text left-text">**No Vendor lock-in1</div>
                     <div class="spinner-gradient"></div>
                     <div class="side-text right-text">**50%-70% Savings</div>
                 </div>
