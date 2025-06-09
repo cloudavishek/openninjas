@@ -465,8 +465,22 @@ header {
         /* Responsive Design */
         @media (max-width: 768px) {
             .nav-links {
-                display: none;
-            }
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 2rem;
+        background-color: white;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+        z-index: 999;
+    }
+
+    .nav-links.nav-active {
+        display: flex;
+    }
 
             .mobile-menu {
                 display: flex;
@@ -564,8 +578,22 @@ header {
         /* Responsive Design */
         @media (max-width: 768px) {
             .nav-links {
-                display: none;
-            }
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 2rem;
+        background-color: white;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+        z-index: 999;
+    }
+
+    .nav-links.nav-active {
+        display: flex;
+    }
 
             .mobile-menu {
                 display: flex;
@@ -940,7 +968,7 @@ header {
         const navLinks = document.querySelector('.nav-links');
         
         mobileMenu.addEventListener('click', function() {
-            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+            navLinks.classList.toggle('nav-active');
         });
 
         // Intersection Observer for Animations
