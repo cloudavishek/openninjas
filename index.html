@@ -719,6 +719,24 @@
                 font-size: 0.85rem;
             }
         }
+        
+        .success-message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #28a745;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+    z-index: 10000;
+    animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
       
     </style>
 </head>
@@ -854,7 +872,7 @@
                         <!-- Hidden fields for FormSubmit configuration -->
                         <input type="hidden" name="_subject" value="New OpenNinjas Contact Form Submission">
                         <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
+                        <input type="hidden" name="_next" value="https://cloudavishek.github.io/openninjas/index.html?success=true"">
                         
                         <div class="form-group">
                             <label for="name">Name</label>
@@ -942,6 +960,22 @@
             card.style.transition = 'all 0.6s ease';
             observer.observe(card);
         });
+        
+     // Check for success parameter and show message
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('success') === 'true') {
+            const successMessage = document.createElement('div');
+            successMessage.className = 'success-message';
+            successMessage.textContent = 'Message Sent Successfully!';
+            document.body.appendChild(successMessage);
+            
+            // Remove message after 5 seconds
+            setTimeout(() => {
+                successMessage.remove();
+                // Clean URL by removing the success parameter
+                window.history.replaceState({}, document.title, window.location.pathname);
+            }, 5000);
+        }
     </script>
 </body>
 </html>
