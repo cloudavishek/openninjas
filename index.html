@@ -464,25 +464,31 @@ header {
 
         /* Responsive Design */
         @media (max-width: 768px) {
-  
-     nav {
-        flex-direction: row;
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .nav-header {
+        display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 1rem;
+        width: 100%;
     }
     
     .nav-links {
-        display: none; /* Hidden by default */
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
-        justify-items: center;
+        display: none;
+        flex-direction: row;
+        gap: 2rem;
+        justify-content: flex-start;
         margin: 0;
         padding: 1rem 0;
+        width: 100%;
     }
     
     .nav-links.show {
-        display: grid; /* Shows as 2-row grid when toggled */
+        display: flex;
     }
     
     .nav-links li {
@@ -491,20 +497,14 @@ header {
     
     .nav-links a {
         color: #2c3e50;
-        font-weight: 600;
-        padding: 0.5rem 1rem;
-        background: rgba(255, 255, 255, 0.9);
-        border-radius: 20px;
-        display: block;
-        text-align: center;
-        min-width: 80px;
+        font-weight: normal;
+        text-decoration: none;
+        font-size: 1rem;
     }
     
     .mobile-menu {
         display: flex;
-        order: -1;
     }
-
             header {
                 padding: 1rem 0 2rem;
             }
@@ -597,23 +597,30 @@ header {
         /* Responsive Design */
         @media (max-width: 768px) {
      nav {
-        flex-direction: row;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .nav-header {
+        display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 1rem;
+        width: 100%;
     }
     
     .nav-links {
-        display: none; /* Hidden by default */
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
-        justify-items: center;
+        display: none;
+        flex-direction: row;
+        gap: 2rem;
+        justify-content: flex-start;
         margin: 0;
         padding: 1rem 0;
+        width: 100%;
     }
     
     .nav-links.show {
-        display: grid; /* Shows as 2-row grid when toggled */
+        display: flex;
     }
     
     .nav-links li {
@@ -622,18 +629,13 @@ header {
     
     .nav-links a {
         color: #2c3e50;
-        font-weight: 600;
-        padding: 0.5rem 1rem;
-        background: rgba(255, 255, 255, 0.9);
-        border-radius: 20px;
-        display: block;
-        text-align: center;
-        min-width: 80px;
+        font-weight: normal;
+        text-decoration: none;
+        font-size: 1rem;
     }
     
     .mobile-menu {
         display: flex;
-        order: -1;
     }
 
             header {
@@ -818,20 +820,22 @@ header {
 
     <!-- Extended Header -->
     <header>
-        <nav>
-            <div><img src="1000010830-Picsart-BackgroundRemover.jpg" width="170" height="70"></div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="mobile-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
+<nav>
+    <div class="nav-header">
+        <div><img src="1000010830-Picsart-BackgroundRemover.jpg" width="170" height="70"></div>
+        <div class="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
         
         <!-- Company Details Section -->
         <div class="company-details">
