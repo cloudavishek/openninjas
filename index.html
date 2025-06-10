@@ -464,22 +464,19 @@ header {
 
         /* Responsive Design */
         @media (max-width: 768px) {
+  
+     nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
     .nav-links {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 0;
-        padding: 1rem;
+        gap: 1rem;
+        justify-items: center;
         margin: 0;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        border-radius: 0 0 10px 10px;
-        z-index: 1000;
-        display: none;
+        padding: 0;
     }
     
     .nav-links.show {
@@ -487,20 +484,23 @@ header {
     }
     
     .nav-links li {
-        text-align: center;
-        margin: 0.5rem 0;
+        margin: 0;
     }
     
     .nav-links a {
         color: #2c3e50;
         font-weight: 600;
-        padding: 0.75rem;
+        padding: 0.5rem 1rem;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 20px;
         display: block;
-        border-radius: 5px;
+        text-align: center;
+        min-width: 80px;
     }
-            .mobile-menu {
-                display: flex;
-            }
+    
+    .mobile-menu {
+        display: flex;
+    }
 
             header {
                 padding: 1rem 0 2rem;
@@ -593,22 +593,18 @@ header {
         }
         /* Responsive Design */
         @media (max-width: 768px) {
-         .nav-links {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav-links {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 0;
-        padding: 1rem;
+        gap: 1rem;
+        justify-items: center;
         margin: 0;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        border-radius: 0 0 10px 10px;
-        z-index: 1000;
-        display: none;
+        padding: 0;
     }
     
     .nav-links.show {
@@ -616,21 +612,23 @@ header {
     }
     
     .nav-links li {
-        text-align: center;
-        margin: 0.5rem 0;
+        margin: 0;
     }
     
     .nav-links a {
         color: #2c3e50;
         font-weight: 600;
-        padding: 0.75rem;
+        padding: 0.5rem 1rem;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 20px;
         display: block;
-        border-radius: 5px;
+        text-align: center;
+        min-width: 80px;
     }
-
-            .mobile-menu {
-                display: flex;
-            }
+    
+    .mobile-menu {
+        display: flex;
+    }
 
             header {
                 padding: 1rem 0 3rem;
