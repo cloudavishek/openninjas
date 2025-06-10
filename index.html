@@ -471,16 +471,16 @@ header {
     }
     
     .nav-links {
-        display: grid;
+        display: none; /* Hidden by default */
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
         justify-items: center;
         margin: 0;
-        padding: 0;
+        padding: 1rem 0;
     }
     
     .nav-links.show {
-        display: grid;
+        display: grid; /* Shows as 2-row grid when toggled */
     }
     
     .nav-links li {
@@ -593,22 +593,22 @@ header {
         }
         /* Responsive Design */
         @media (max-width: 768px) {
-    nav {
+     nav {
         flex-direction: column;
         gap: 1rem;
     }
     
     .nav-links {
-        display: grid;
+        display: none; /* Hidden by default */
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
         justify-items: center;
         margin: 0;
-        padding: 0;
+        padding: 1rem 0;
     }
     
     .nav-links.show {
-        display: grid;
+        display: grid; /* Shows as 2-row grid when toggled */
     }
     
     .nav-links li {
