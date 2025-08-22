@@ -122,7 +122,7 @@ header {
     color: #2c3e50;
     text-decoration: none;
     font-family: 'Arial', sans-serif;
-    font-weight: normal;
+    font-weight: bold;
     font-size: 1.1rem;
     transition: color 0.3s ease;
 }
@@ -159,7 +159,7 @@ header {
 
         .company-details .hero-text {
             flex: 1;
-            padding: 1rem;
+            padding: 0.5rem;
             animation: fadeInUp 1s ease forwards;
         }
 
@@ -177,7 +177,7 @@ header {
             line-height: 1.8;
             color: #2c3e50;
             text-align: left;
-            margin: 0 0 2rem 0;
+            margin: 0 0 1rem 0;
         }
 
         .company-badges {
@@ -248,10 +248,10 @@ header {
         }
 
         /* Services Section - Adjusted top padding */
-        .services {
-            padding: 80px 0;
-            background: #f8f9fa;
-        }
+.services {
+    padding: 80px 0 40px 0; /* Reduced bottom padding */
+    background: #f8f9fa;
+}
 
         .container {
             max-width: 1200px;
@@ -499,7 +499,7 @@ header {
     color: #2c3e50;
     text-decoration: none;
     font-family: 'Arial', sans-serif;
-    font-weight: normal;
+    font-weight: bold;
     font-size: 1.1rem;
     transition: color 0.3s ease;
 }
@@ -633,7 +633,7 @@ header {
     color: #2c3e50;
     text-decoration: none;
     font-family: 'Arial', sans-serif;
-    font-weight: normal;
+    font-weight: bold;
     font-size: 1.1rem;
     transition: color 0.3s ease;
 }
@@ -653,7 +653,7 @@ header {
             }
 
             .company-details .hero-text {
-                padding: 1rem 0;
+                padding: 0.5rem 0;
                 text-align: left;
             }
 
@@ -669,7 +669,7 @@ header {
                 font-size: 1rem;
                 text-align: left;
                 line-height: 1.7;
-                margin-bottom: 1.8rem;
+                margin-bottom: 1rem;
                 color: #34495e;
             }
 
@@ -728,7 +728,7 @@ header {
             }
 
             .company-details .hero-text {
-                padding: 0.75rem 0;
+                padding: 0.375rem 0;
             }
 
             .company-details .hero-text h1 {
@@ -741,7 +741,7 @@ header {
             .company-details .hero-text p {
                 font-size: 0.95rem;
                 line-height: 1.6;
-                margin-bottom: 1.5rem;
+                margin-bottom: 1rem;
                 text-align: left;
             }
 
@@ -783,7 +783,7 @@ header {
             .company-details .hero-text p {
                 font-size: 0.9rem;
                 line-height: 1.55;
-                margin-bottom: 1.25rem;
+                margin-bottom: 1rem;
             }
 
             .badge {
@@ -812,6 +812,207 @@ header {
     from { transform: translateX(100%); opacity: 0; }
     to { transform: translateX(0); opacity: 1; }
 }
+
+
+/* Customer Stories Section */
+.customer-stories {
+    padding: 40px 0 80px 0; /* Reduced top padding */
+    background: #f8f9fa;
+}
+.section-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 3rem;
+    font-weight: 400;
+}
+
+.stories-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
+.stories-wrapper {
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.stories-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 2rem;
+}
+
+.story-tile {
+    min-width: 350px;
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-top: 4px solid #5dade2;
+    transition: all 0.3s ease;
+}
+
+.story-tile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(93, 173, 226, 0.15);
+}
+
+.story-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.company-logo {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(145deg, #5dade2, #4a9bc7);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.company-info h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    color: #2c3e50;
+    font-weight: 700;
+}
+
+.industry {
+    color: #666;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.story-quote {
+    font-style: italic;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+.story-metrics {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: linear-gradient(145deg, #f8f9fa, #e9ecef);
+    border-radius: 10px;
+}
+
+.metric {
+    text-align: center;
+    flex: 1;
+}
+
+.metric-value {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #5dade2;
+    line-height: 1;
+}
+
+.metric-label {
+    font-size: 0.85rem;
+    color: #666;
+    font-weight: 500;
+}
+
+.story-author {
+    color: #5dade2;
+    font-weight: 600;
+    margin: 0;
+    text-align: right;
+}
+
+.nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(145deg, #ecf0f1, #bdc3c7);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    color: #2c3e50;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-arrow:hover {
+    background: linear-gradient(145deg, #ffffff, #ecf0f1);
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 4px 15px rgba(236, 240, 241, 0.4);
+}
+
+.nav-arrow-left {
+    left: 10px;
+}
+
+.nav-arrow-right {
+    right: 10px;
+}
+
+/* Responsive Design for Customer Stories */
+@media (max-width: 768px) {
+    .stories-container {
+        padding: 0 50px;
+    }
+    
+    .story-tile {
+        min-width: 280px;
+        padding: 1.5rem;
+    }
+    
+    .story-metrics {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav-arrow {
+        width: 35px;
+        height: 35px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .stories-container {
+        padding: 0 40px;
+    }
+    
+    .story-tile {
+        min-width: 250px;
+        padding: 1.25rem;
+    }
+    
+    .company-info h3 {
+        font-size: 1.1rem;
+    }
+    
+    .story-quote {
+        font-size: 0.95rem;
+    }
+    
+    .metric-value {
+        font-size: 1.5rem;
+    }
+}
       
     </style>
 </head>
@@ -825,7 +1026,7 @@ header {
     <header>
 <nav>
     <div class="nav-header">
-        <div><img src="3318a0b8-3a64-423c-965f-384537a5f8e8.png" width="170" height="110"></div>
+        <div><img src="3318a0b8-3a64-423c-965f-384537a5f8e8.png" width="170" height="120"></div>
         <div class="mobile-menu">
             <span></span>
             <span></span>
@@ -836,6 +1037,7 @@ header {
         <li><a href="#home">Home</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#about">About</a></li>
+        <li><a href="#customer-stories">Customer Stories</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
 </nav>
@@ -844,9 +1046,9 @@ header {
         <div class="company-details">
             <div class="hero-text">
                 <h1>Own Your Tech. Power Your Future.</h1>
-                <p>At <strong>OpenNinjas Technologies</strong>, we’re not just transforming how businesses use Data, AI, and Integration—we’re redefining who gets to lead that transformation. As a minority- and women-owned company with 100% U.S.-based operations, we bring a fresh, independent perspective to enterprise technology—one built on excellence, equity, and open source innovation.</p>
-                <p>Founded by former FAANG engineers and veterans from leading data companies, we fuse elite technical talent with deep real-world experience to deliver vendor-neutral, high-performance solutions that actually work for you—not for your software provider.Our platforms are designed to help you break free from bloated licensing models and rigid legacy systems. The result? Smarter integration. Faster scale. AI that delivers real ROI. Many of our clients reduce infrastructure and operating costs by over 50%—without sacrificing speed, flexibility, or control.</p>
-                <p>With OpenNinjas, you don’t just adopt technology—you own it, shape it, and drive your future with it.</p>
+                <p>At <strong>OpenNinjas Technologies</strong>, we help businesses take control of Data, AI, and Integration with open source, vendor-neutral solutions.</p>
+                <p>As a 100% U.S.-based, minority- and women-owned company, we bring fresh perspective and deep expertise. Founded by FAANG and data veterans, we cut costs by 50% while boosting performance, flexibility, and scale.</p>
+                <p>With us, you don’t just use technology—you own and shape your future with it.</p>
 
             </div>
         </div>
@@ -890,6 +1092,7 @@ header {
             </div>
         </div>
     </section>
+   
 
     <!-- About Section -->
     <section class="about" id="about">
@@ -898,16 +1101,14 @@ header {
                 <div class="about-text">
                     <h2>Massive Savings, Zero Compromise</h2>
                     <p>Why pay millions in licensing fees when open source delivers the same enterprise capabilities? We are masters of the open source ecosystem, architecting solutions that slash IT budgets by 60-80% while delivering superior performance and flexibility.</p>
-                    <p>From Apache Kafka data streams to Kubernetes orchestration, from TensorFlow models to Elasticsearch analytics - we build solutions that scale without the vendor tax. No licensing fees. No vendor lock-in. Complete control over your technology destiny.</p>
-                    <p>Our clients typically save $500K-$5M annually by migrating from proprietary platforms to our expertly crafted open source architectures. The same power, fraction of the cost.</p>
-                </div>
+                    </div>
                 <div class="stats">
                     <div class="stat">
-                        <div class="stat-number">75%</div>
+                        <div class="stat-number">60%</div>
                         <div class="stat-label">Average Cost Reduction</div>
                     </div>
                     <div class="stat">
-                        <div class="stat-number">$2.5M</div>
+                        <div class="stat-number">$1M</div>
                         <div class="stat-label">Avg Annual Savings</div>
                     </div>
                     <div class="stat">
@@ -915,13 +1116,96 @@ header {
                         <div class="stat-label">Licensing Fees</div>
                     </div>
                     <div class="stat">
-                        <div class="stat-number">100+</div>
-                        <div class="stat-label">Migration Success Stories</div>
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Success Stories</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    
+      <!-- Customer Stories Section -->
+    <section class="customer-stories" id="customer-stories">
+    <div class="container">
+        <h2 class="section-title">Customer Stories</h2>
+        <div class="stories-container">
+            <button class="nav-arrow nav-arrow-left" id="prevStory">‹</button>
+            <div class="stories-wrapper">
+                <div class="stories-track" id="storiesTrack">
+                    
+                    <div class="story-tile">
+                        <div class="story-header">
+                            <img src="healthcare.jpg" height="50"></img>
+                            <div class="company-info">
+                                <span class="industry"><h3>Healthcare</h3></span>
+                            </div>
+                        </div>
+                        <div class="story-content">
+                            <p class="story-quote">"We replaced our legacy ETL with DuckDB for in-process analytics on large Parquet datasets. We achieved clinical insights by querying data directly from data lake without expensive data movement. This shift enabled real-time patient risk scoring while reducing infrastructure costs."</p>
+                            <div class="story-metrics">
+                                <div class="metric">
+                                    <span class="metric-value">50%</span>
+                                    <span class="metric-label">Faster Insight</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-value">350K</span>
+                                    <span class="metric-label">Annual Savings</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="story-tile">
+                        <div class="story-header">
+                           <img src="retail.jpg" height="70"></img>
+                            <div class="company-info">
+                                <span class="industry"><h3>Retail</h3></span>
+                            </div>
+                        </div>
+                        <div class="story-content">
+                            <p class="story-quote">"OpenNinjas migrated our legacy ETL with an adaptive, LLM-driven open-source framework that auto-adjusts to schema changes, cutting data pipeline costs by 50%. This shift enabled real-time transformations, faster onboarding, and eliminated vendor lock-in costs."</p>
+                            <div class="story-metrics">
+                                <div class="metric">
+                                    <span class="metric-value">$400K</span>
+                                    <span class="metric-label">Annual Savings</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-value">60%</span>
+                                    <span class="metric-label">Cost Reduction</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="story-tile">
+                        <div class="story-header">
+                            <img src="manufacturing.jpg" height="90"></img>
+                            <div class="company-info">
+                                <span class="industry"><h3>Manufacturing</h3></span>
+                            </div>
+                        </div>
+                        <div class="story-content">
+                            <p class="story-quote">"Our IoT data pipeline now handles 50M sensor readings daily using Apache Storm and Cassandra. We eliminated $200K in monthly licensing fees while improving reliability."</p>
+                            <div class="story-metrics">
+                                <div class="metric">
+                                    <span class="metric-value">$1.9M</span>
+                                    <span class="metric-label">Annual Savings</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-value">79%</span>
+                                    <span class="metric-label">Cost Reduction</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <button class="nav-arrow nav-arrow-right" id="nextStory">›</button>
+        </div>
+    </div>
+</section>
 
     <!-- Contact Section -->
     <section class="contact" id="contact">
@@ -1052,6 +1336,78 @@ header {
                 window.history.replaceState({}, document.title, window.location.pathname);
             }, 5000);
         }
+        
+     // Customer Stories Navigation
+  document.addEventListener('DOMContentLoaded', function() {
+    const track = document.getElementById('storiesTrack');
+    const prevBtn = document.getElementById('prevStory');
+    const nextBtn = document.getElementById('nextStory');
+    
+    if (track && prevBtn && nextBtn) {
+        let currentIndex = 0;
+        const tiles = track.children;
+        
+        function getTileWidth() {
+            return tiles[0].offsetWidth + 32; // 32px for gap between tiles
+        }
+        
+        function getVisibleTiles() {
+            const containerWidth = track.parentElement.offsetWidth;
+            const tileWidth = getTileWidth();
+            return Math.floor(containerWidth / tileWidth);
+        }
+        
+        function getMaxIndex() {
+            const visibleTiles = getVisibleTiles();
+            return Math.max(0, tiles.length - visibleTiles);
+        }
+        
+        function updateCarousel() {
+            const tileWidth = getTileWidth();
+            const maxIndex = getMaxIndex();
+            
+            // Ensure currentIndex doesn't exceed maxIndex
+            currentIndex = Math.min(currentIndex, maxIndex);
+            
+            const translateX = -currentIndex * tileWidth;
+            track.style.transform = `translateX(${translateX}px)`;
+            
+            // Update button states
+            prevBtn.style.opacity = currentIndex === 0 ? '0.5' : '1';
+            nextBtn.style.opacity = currentIndex >= maxIndex ? '0.5' : '1';
+            prevBtn.disabled = currentIndex === 0;
+            nextBtn.disabled = currentIndex >= maxIndex;
+        }
+        
+        prevBtn.addEventListener('click', function() {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateCarousel();
+            }
+        });
+        
+        nextBtn.addEventListener('click', function() {
+            const maxIndex = getMaxIndex();
+            if (currentIndex < maxIndex) {
+                currentIndex++;
+                updateCarousel();
+            }
+        });
+        
+        // Initialize
+        updateCarousel();
+        
+        // Handle window resize
+        let resizeTimeout;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(function() {
+                currentIndex = 0; // Reset to beginning on resize
+                updateCarousel();
+            }, 250);
+        });
+    }
+});
     </script>
 </body>
 </html>
