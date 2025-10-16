@@ -1,1 +1,187 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenNinjas - Digital Transformation Experts</title>
+    <link rel="stylesheet" href="css/ninjas.css">
+    <link href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+<body>
+    <div id="header-bg-animation" class="header-bg-animation">
+        <iframe src="ai_power_animation.html" style="width:100vw;height:100vh;border:none;display:block;position:absolute;top:0;left:0;background:transparent;"></iframe>
+    </div>
+    <header class="hero sticky-header">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="3318a0b8-3a64-423c-965f-384537a5f8e8.png" alt="OpenNinja Logo" class="logo-img">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#services" onclick="scrollToSection('services')">Services</a></li>
+                <li><a href="#customer-stories" onclick="scrollToSection('customer-stories')">Customer Stories</a></li>
+                <li><a href="#contact" onclick="scrollToSection('contact')">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main-content">
+        <section id="services" class="solutions modern-section main-section">
+            <div class="section-header">
+                <h2>Our Solutions</h2>
+            </div>
+            <div class="scrollable-card-container">
+                <button class="scroll-btn scroll-left" aria-label="Scroll left"><span>&#8592;</span></button>
+                <div class="modern-card-grid">
+                    <article class="modern-card" aria-label="Cloud Modernization">
+                        <div class="card-accent cloud"></div>
+                        <img src="cloud.png" alt="Cloud" class="modern-card-icon">
+                        <h3 class="card-title">Cloud Modernization</h3>
+                        <p class="card-desc">Seamless migration, optimization, and management of cloud infrastructure for agility and scale.</p>
+                    </article>
+                    <article class="modern-card" aria-label="AI & Analytics">
+                        <div class="card-accent ai"></div>
+                        <img src="ai.png" alt="AI" class="modern-card-icon">
+                        <h3 class="card-title">AI & Analytics</h3>
+                        <p class="card-desc">Unlock insights and automate processes with advanced machine learning and analytics platforms.</p>
+                    </article>
+                    <article class="modern-card" aria-label="Intelligent Automation">
+                        <div class="card-accent automation"></div>
+                        <img src="automation-icon-2.jpg" alt="Automation" class="modern-card-icon">
+                        <h3 class="card-title">Intelligent Automation</h3>
+                        <p class="card-desc">Streamline operations and boost productivity with RPA and intelligent workflow solutions.</p>
+                    </article>
+                    <article class="modern-card" aria-label="Data Engineering">
+                        <div class="card-accent data"></div>
+                        <img src="analyt.jpg" alt="Data Engineering" class="modern-card-icon">
+                        <h3 class="card-title">Data Engineering</h3>
+                        <p class="card-desc">Build robust, scalable data pipelines and architectures for reliable, high-quality data delivery.</p>
+                    </article>
+                    <article class="modern-card" aria-label="DevOps & Platform Engineering">
+                        <div class="card-accent devops"></div>
+                        <img src="de.png" alt="DevOps & Platform Engineering" class="modern-card-icon">
+                        <h3 class="card-title">DevOps & Platform Engineering</h3>
+                        <p class="card-desc">Accelerate development cycles and improve reliability with modern DevOps practices and platform automation.</p>
+                    </article>
+                </div>
+                <button class="scroll-btn scroll-right" aria-label="Scroll right"><span>&#8594;</span></button>
+            </div>
+        </section>
+        <section class="customer-stories modern-section main-section" id="customer-stories">
+            <div class="section-header">
+                <h2>Customer Stories</h2>
+            </div>
+            <div class="scrollable-card-container">
+                <button class="scroll-btn scroll-left" aria-label="Scroll left"><span>&#8592;</span></button>
+                <div class="modern-card-grid">
+                    <article class="modern-card" aria-label="Healthcare Customer Story">
+                        <div class="card-accent healthcare"></div>
+                        <img src="healthcare.jpg" alt="Healthcare industry transformation" class="modern-card-icon">
+                        <div class="industry-badge">Healthcare</div>
+                        <h3 class="card-title">Clinical Insights with DuckDB</h3>
+                        <blockquote class="card-quote">“We replaced our legacy ETL with DuckDB for in-process analytics on large Parquet datasets. We achieved clinical insights by querying data directly from data lake without expensive data movement. This shift enabled real-time patient risk scoring while reducing infrastructure costs.”</blockquote>
+                        <div class="metrics-bar">
+                            <span><strong>50%</strong> Faster Insight</span>
+                            <span><strong>350K</strong> Annual Savings</span>
+                        </div>
+                    </article>
+                    <article class="modern-card" aria-label="Retail Customer Story">
+                        <div class="card-accent retail"></div>
+                        <img src="retail.jpg" alt="Retail industry ETL migration" class="modern-card-icon">
+                        <div class="industry-badge">Retail</div>
+                        <h3 class="card-title">Adaptive ETL Migration</h3>
+                        <blockquote class="card-quote">“OpenNinjas migrated our legacy ETL with an adaptive, LLM-driven open-source framework that auto-adjusts to schema changes, cutting data pipeline costs by 50%. This shift enabled real-time transformations, faster onboarding, and eliminated vendor lock-in costs.”</blockquote>
+                        <div class="metrics-bar">
+                            <span><strong>$400K</strong> Annual Savings</span>
+                            <span><strong>60%</strong> Cost Reduction</span>
+                        </div>
+                    </article>
+                    <article class="modern-card" aria-label="Manufacturing Customer Story">
+                        <div class="card-accent manufacturing"></div>
+                        <img src="manufacturing.jpg" alt="Manufacturing IoT data pipeline" class="modern-card-icon">
+                        <div class="industry-badge">Manufacturing</div>
+                        <h3 class="card-title">IoT Data Pipeline Transformation</h3>
+                        <blockquote class="card-quote">“Our IoT data pipeline now handles 50M sensor readings daily using Apache Storm and Cassandra. We eliminated $200K in monthly licensing fees while improving reliability.”</blockquote>
+                        <div class="metrics-bar">
+                            <span><strong>$1.9M</strong> Annual Savings</span>
+                            <span><strong>79%</strong> Cost Reduction</span>
+                        </div>
+                    </article>
+                </div>
+                <button class="scroll-btn scroll-right" aria-label="Scroll right"><span>&#8594;</span></button>
+            </div>
+        </section>
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section modern-section main-section">
+            <div class="section-header">
+                <h2>Contact Us</h2>
+            </div>
+            <div class="scrollable-card-container" style="justify-content:center;">
+                <div class="modern-card contact-card">
+                    <form class="contact-form" action="https://formsubmit.co/3f476a41bb9832d8f020efc689a948f5" method="POST">
+                        <!-- Hidden fields for FormSubmit configuration -->
+                        <input type="hidden" name="_subject" value="New OpenNinjas Contact Form Submission">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="https://cloudavishek.github.io/openninjas/index.html?success=true">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        <label for="company">Company:</label>
+                        <input type="text" id="company" name="company">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" required placeholder="Tell us about your current IT costs and pain points - let's calculate your potential savings..."></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        function scrollToSection(sectionId) {
+            // Hide all main sections
+            const sections = document.querySelectorAll('.main-section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+            // Show the selected section
+            var section = document.getElementById(sectionId);
+            if (section) {
+                section.style.display = 'block';
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+        // Optional: Show all sections when user scrolls manually
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('.main-section');
+            sections.forEach(section => {
+                section.style.display = '';
+            });
+        });
+        // Horizontal card slider for mobile
+        function setupHorizontalCardSlider() {
+            document.querySelectorAll('.scrollable-card-container').forEach(container => {
+                const grid = container.querySelector('.modern-card-grid');
+                const leftBtn = container.querySelector('.scroll-left');
+                const rightBtn = container.querySelector('.scroll-right');
+                if (!grid || !leftBtn || !rightBtn) return;
+                // Card width (matches CSS: 90vw)
+                const cardWidth = grid.querySelector('.modern-card')?.offsetWidth || window.innerWidth * 0.9;
+                leftBtn.addEventListener('click', () => {
+                    grid.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+                });
+                rightBtn.addEventListener('click', () => {
+                    grid.scrollBy({ left: cardWidth, behavior: 'smooth' });
+                });
+            });
+        }
+        if (window.innerWidth <= 900) {
+            setupHorizontalCardSlider();
+        }
+        window.addEventListener('resize', () => {
+            if (window.innerWidth <= 900) {
+                setupHorizontalCardSlider();
+            }
+        });
+    </script>
+</body>
+</html>
