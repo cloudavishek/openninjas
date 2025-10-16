@@ -157,6 +157,31 @@
                 section.style.display = '';
             });
         });
+        // Horizontal card slider for mobile
+        function setupHorizontalCardSlider() {
+            document.querySelectorAll('.scrollable-card-container').forEach(container => {
+                const grid = container.querySelector('.modern-card-grid');
+                const leftBtn = container.querySelector('.scroll-left');
+                const rightBtn = container.querySelector('.scroll-right');
+                if (!grid || !leftBtn || !rightBtn) return;
+                // Card width (matches CSS: 90vw)
+                const cardWidth = grid.querySelector('.modern-card')?.offsetWidth || window.innerWidth * 0.9;
+                leftBtn.addEventListener('click', () => {
+                    grid.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+                });
+                rightBtn.addEventListener('click', () => {
+                    grid.scrollBy({ left: cardWidth, behavior: 'smooth' });
+                });
+            });
+        }
+        if (window.innerWidth <= 900) {
+            setupHorizontalCardSlider();
+        }
+        window.addEventListener('resize', () => {
+            if (window.innerWidth <= 900) {
+                setupHorizontalCardSlider();
+            }
+        });
     </script>
 </body>
 </html>
