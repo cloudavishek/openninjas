@@ -1012,3 +1012,35 @@ header::before {
         padding: 0 1vw;
     }
 }
+
+/* Mobile horizontal card slider for Solutions and Customer Stories */
+@media (max-width: 900px) {
+    .modern-card-grid {
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        width: 100vw !important;
+        scroll-behavior: smooth;
+        gap: 16px !important;
+        padding: 24px 0;
+    }
+    .modern-card {
+        min-width: 90vw !important;
+        max-width: 90vw !important;
+        flex: 0 0 90vw !important;
+        margin-right: 0 !important;
+    }
+    .scrollable-card-container {
+        overflow-x: hidden !important;
+        width: 100vw !important;
+        justify-content: flex-start !important;
+        padding: 0 !important;
+    }
+    /* Hide scrollbars for a cleaner look */
+    .modern-card-grid::-webkit-scrollbar {
+        display: none;
+    }
+    .modern-card-grid {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+}
