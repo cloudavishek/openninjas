@@ -744,6 +744,28 @@ header::before {
     }
 }
 
+@media (max-width: 600px) {
+    .customer-stories .modern-card-grid,
+    .solutions .modern-card-grid {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 16px;
+        padding: 16px 0;
+    }
+    .customer-stories .modern-card,
+    .solutions .modern-card {
+        min-width: 80vw;
+        max-width: 85vw;
+        flex: 0 0 auto;
+    }
+    .customer-stories .scrollable-card-container,
+    .solutions .scrollable-card-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding: 0 4vw;
+    }
+}
+
 /* Horizontal scroll for card grids */
 .scrollable-card-container {
     position: relative;
@@ -795,15 +817,6 @@ header::before {
 }
 .scroll-right {
     right: 0;
-}
-
-/* Hide scroll bar for aesthetics */
-.modern-card-grid::-webkit-scrollbar {
-    display: none;
-}
-.modern-card-grid {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
 }
 
 /* --- Contact Section Professional Styling --- */
@@ -1030,17 +1043,81 @@ header::before {
         margin-right: 0 !important;
     }
     .scrollable-card-container {
-        overflow-x: hidden !important;
+        overflow-x: auto !important;
         width: 100vw !important;
         justify-content: flex-start !important;
         padding: 0 !important;
     }
-    /* Hide scrollbars for a cleaner look */
+    /* Ensure scrollbar is visible on mobile */
     .modern-card-grid::-webkit-scrollbar {
-        display: none;
+        display: block !important;
+        height: 8px !important;
+        background: #eaf6ff !important;
     }
     .modern-card-grid {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
+        scrollbar-width: thin !important;
+        scrollbar-color: #3a7ca5 #eaf6ff !important;
+    }
+    /* Remove any rules that hide scrollbars */
+}
+
+/* Fancy horizontal scrollbar for card grids (Solutions & Customer Stories) */
+.modern-card-grid {
+    scrollbar-width: thin;
+    scrollbar-color: #5dade2 #eaf6ff;
+}
+.modern-card-grid::-webkit-scrollbar {
+    height: 10px;
+    background: #eaf6ff;
+    border-radius: 8px;
+}
+.modern-card-grid::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, #5dade2 0%, #48c9b0 100%);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(90,173,226,0.18);
+    border: 2px solid #eaf6ff;
+}
+.modern-card-grid::-webkit-scrollbar-track {
+    background: #eaf6ff;
+    border-radius: 8px;
+}
+@media (max-width: 900px) {
+    .modern-card-grid {
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        width: 100vw !important;
+        gap: 16px !important;
+        padding: 24px 0;
+        scroll-behavior: smooth;
+        scrollbar-width: thin;
+        scrollbar-color: #5dade2 #eaf6ff;
+    }
+    .modern-card {
+        min-width: 90vw !important;
+        max-width: 90vw !important;
+        flex: 0 0 90vw !important;
+        margin-right: 0 !important;
+    }
+    .scrollable-card-container {
+        overflow-x: auto !important;
+        width: 100vw !important;
+        justify-content: flex-start !important;
+        padding: 0 !important;
+    }
+    .modern-card-grid::-webkit-scrollbar {
+        height: 10px;
+        background: #eaf6ff;
+        border-radius: 8px;
+    }
+    .modern-card-grid::-webkit-scrollbar-thumb {
+        background: linear-gradient(90deg, #5dade2 0%, #48c9b0 100%);
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(90,173,226,0.18);
+        border: 2px solid #eaf6ff;
+    }
+    .modern-card-grid::-webkit-scrollbar-track {
+        background: #eaf6ff;
+        border-radius: 8px;
     }
 }
