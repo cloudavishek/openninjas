@@ -30,7 +30,6 @@
                 <h2>Our Solutions</h2>
             </div>
             <div class="scrollable-card-container">
-                <button class="scroll-btn scroll-left" aria-label="Scroll left"><span>&#8592;</span></button>
                 <div class="modern-card-grid">
                     <article class="modern-card" aria-label="Cloud Modernization">
                         <div class="card-accent cloud"></div>
@@ -63,7 +62,6 @@
                         <p class="card-desc">Accelerate development cycles and improve reliability with modern DevOps practices and platform automation.</p>
                     </article>
                 </div>
-                <button class="scroll-btn scroll-right" aria-label="Scroll right"><span>&#8594;</span></button>
             </div>
         </section>
         <section class="customer-stories modern-section main-section" id="customer-stories">
@@ -71,7 +69,6 @@
                 <h2>Customer Stories</h2>
             </div>
             <div class="scrollable-card-container">
-                <button class="scroll-btn scroll-left" aria-label="Scroll left"><span>&#8592;</span></button>
                 <div class="modern-card-grid">
                     <article class="modern-card" aria-label="Healthcare Customer Story">
                         <div class="card-accent healthcare"></div>
@@ -107,7 +104,6 @@
                         </div>
                     </article>
                 </div>
-                <button class="scroll-btn scroll-right" aria-label="Scroll right"><span>&#8594;</span></button>
             </div>
         </section>
         <!-- Contact Section -->
@@ -156,31 +152,6 @@
             sections.forEach(section => {
                 section.style.display = '';
             });
-        });
-        // Horizontal card slider for mobile
-        function setupHorizontalCardSlider() {
-            document.querySelectorAll('.scrollable-card-container').forEach(container => {
-                const grid = container.querySelector('.modern-card-grid');
-                const leftBtn = container.querySelector('.scroll-left');
-                const rightBtn = container.querySelector('.scroll-right');
-                if (!grid || !leftBtn || !rightBtn) return;
-                // Card width (matches CSS: 90vw)
-                const cardWidth = grid.querySelector('.modern-card')?.offsetWidth || window.innerWidth * 0.9;
-                leftBtn.addEventListener('click', () => {
-                    grid.scrollBy({ left: -cardWidth, behavior: 'smooth' });
-                });
-                rightBtn.addEventListener('click', () => {
-                    grid.scrollBy({ left: cardWidth, behavior: 'smooth' });
-                });
-            });
-        }
-        if (window.innerWidth <= 900) {
-            setupHorizontalCardSlider();
-        }
-        window.addEventListener('resize', () => {
-            if (window.innerWidth <= 900) {
-                setupHorizontalCardSlider();
-            }
         });
     </script>
 </body>
