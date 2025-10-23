@@ -667,6 +667,7 @@ header::before {
     color: #1a4d6b;
     transform: scale(1.08);
 }
+
 @media (max-width: 900px) {
     .service-cards {
         flex-direction: column;
@@ -717,7 +718,7 @@ header::before {
         overflow-x: visible !important;
         width: auto !important;
         gap: 20px !important;
-        padding: 24px 5vw !important; /* Add padding here for left/right spacing */
+        padding: 24px 0 !important; /* Remove side padding from grid */
         scroll-behavior: smooth;
         scrollbar-width: thin;
         scrollbar-color: #5dade2 #eaf6ff;
@@ -733,14 +734,14 @@ header::before {
         min-height: 320px !important; /* Ensure minimum height for vertical feel */
     }
     
-    /* First card gets extra left margin for centering */
+    /* First card gets smaller left margin - shows beginning of first card */
     .modern-card:first-child {
-        margin-left: calc((100vw - 280px) / 2 - 5vw) !important;
+        margin-left: 20px !important;
     }
     
-    /* Last card gets extra right margin */
+    /* Last card gets right padding so it can scroll fully into view */
     .modern-card:last-child {
-        margin-right: calc((100vw - 280px) / 2 - 5vw) !important;
+        margin-right: 20px !important;
     }
     
     /* Adjust icon size for better proportions */
@@ -778,6 +779,8 @@ header::before {
         border-radius: 8px;
     }
 }
+
+
 
 @media (max-width: 600px) {
     .customer-stories .modern-card-grid,
