@@ -899,3 +899,10 @@ header::before {
     background: #eaf6ff;
     border-radius: 8px;
 }
+@media (max-width: 900px) {
+    .contact-section .section-header {
+        padding: 0 20px;
+        max-width: 400px;
+        margin: 0 auto 24px auto;
+    }
+}
