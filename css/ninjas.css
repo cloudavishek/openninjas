@@ -668,6 +668,17 @@ header::before {
     transform: scale(1.08);
 }
 
+.contact-section .section-header {
+    padding: 0 20px;
+    max-width: 400px;
+    margin: 0 auto 24px auto;
+}
+
+.contact-section .section-header h2 {
+    text-align: center;
+}
+
+
 @media (max-width: 900px) {
     .service-cards {
         flex-direction: column;
